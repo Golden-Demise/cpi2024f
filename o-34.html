@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1900">
-    <title>o-32
+    <title>o-34
     </title>
     <style>
         html,
@@ -69,72 +69,83 @@
             data-motionno: cubism人物指定動作編號(從0開始，請參閱model3.json檔案的ALL MOTION GROUP)
             -->
             <section>
-                <h3>32. 迷你數獨</h3>
+                <h3>34. 朋友相依關係</h3>
                 <section 
                 data-no="6"
                  data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                     style="text-align: left"><br>
-                    迷你數獨由4*4個格子組成，每格空白或1~4間的整數，而4*4個格子又可以被分為左上、右上、左下、右下4個2*2大小的區域。例如以下的迷你數獨矩陣：<br>
-                    &emsp;&emsp;3 1 4 2<br>
-                    &emsp;&emsp;4 2 3 1<br>
-                    &emsp;&emsp;1 3 2 4<br>
-                    &emsp;&emsp;2 4 1 3<br>
-                    <br>此矩陣又可分為左上、右上、左下、右下4個2*2大小的區域 (Block)，以上面的矩陣為例，左上區域為<br>
-                    &emsp;&emsp;3 1<br>
-                    &emsp;&emsp;4 2<br>
-                    右下區域為<br>
-                    &emsp;&emsp;2 4<br>
-                    &emsp;&emsp;1 3<br>
-                    矩陣中的值須滿足以下數獨規則：<br>
-                    &emsp;&emsp;1. 每個直欄  (Column)中，數字1~4皆不能缺少也不會重複出現。<br>
-                    &emsp;&emsp;2. 每個橫列 (Row)中，數字1~4皆不能缺少也不會重複出現。<br>
-                    &emsp;&emsp;3. 每個區域(Block)中，數字1~4皆不能缺少也不會重複出現。<br>
+                    某社群平台上，每一個使用者都可以將其他使用者設定為【認識的人】，並填上對該使用者的【熟悉度】數值。
+                    若 A 和 B 互相加對方為認識的人，則 A 與 B 的關係為【朋友】，其熟悉度為兩人設定的較小值。
+                    A 可以找尋 B 的朋友，然後認識第二層的新朋友，透過這種方法可以認識一層又一層新的朋友。
+                    <br><br>
+                    給定 N 個認識的人與 A，B，請找出 :<br>
+                    &emsp;&emsp;1.	A 最少要經過多少層的朋友關係才能找到 B ? 會經過哪些朋友?<br>
+                    &emsp;&emsp;2.	假設 A 要經過加總最大熟悉度的朋友關係才能找尋到 B，則會經過哪些朋友? 加總的最大熟悉度為何?<br><br>
+                    【特殊要求】<br>
+                    請使用 dictionary 儲存資料並完成此題目<br>
                <br>
                 </section>
             </section>
 
             <section>
-                <h3>32. 迷你數獨</h3>
-                <section 
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                    style="text-align: left"><br>
-                    本題目需計算出完整的迷你數獨矩陣，例如輸入矩陣：<br>
-                    &emsp;&emsp;0 0 0 0<br>
-                    &emsp;&emsp;0 2 3 1<br>
-                    &emsp;&emsp;0 3 2 4<br>
-                    &emsp;&emsp;2 0 0 3<br>
-                    其中：<br>
-                    &emsp;&emsp;(1) 本題目0 表示需要程式計算取代數字的地方；<br>
-                    &emsp;&emsp;(2) 本題目非0數字固定8個；<br>
-                    &emsp;&emsp;(3) 本題目至少2個直欄、橫列、或區域，存在一個0<br>
-                    計算出完整數獨矩陣步驟：<br>
-                    &emsp;&emsp;(1)右下區域中已知有[2 3 4]，因此0應被取代為1。<br>
-                    &emsp;&emsp;(2) index=3的直欄  (Column)已有[1 3 4]，因此0應被取代為2。<br>
-                    &emsp;&emsp;(3) index=1的橫列(Row)已有[1 2 3]，因此0應被取代為4。<br>
-                    &emsp;&emsp;(4) index=2的橫列(Row)已有[2 3 4]，因此0應被取代為1。<br>
-                    因此矩陣變為<br>
-                    &emsp;&emsp;0 0 0 2<br>
-                    &emsp;&emsp;4 2 3 1<br>
-                    &emsp;&emsp;1 3 2 4<br>
-                    &emsp;&emsp;2 0 1 3<br>
-                    繼續第二、三輪計算，即可完成所有0的替換。<br>
-               <br>
-                </section>
-            </section>
-
-            <section>
-              <h3>輸入輸出說明</h3>
+              <h3>輸入說明</h3>
               <section 
               data-no="6"
                data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                   style="text-align: left"><br>
-                  輸入說明：<br>
-                  &emsp;&emsp;輸入共有4行，每行有4個0~4的整數，其中0表示空白的格子，輸入的每個整數中間以一個空白隔開，表示一個4*4迷你數獨的初始狀態<br><br>
-                  輸出說明：<br>
-                  &emsp;&emsp;輸出共有4行，每行有4個1~4的整數，每個整數間以一個空白隔開。表示一個4*4迷你數獨的結果，且結果符合數獨規則。<br>
+                  輸入說明：<br><br>
+                  第一行：輸入N個整數，代表認識的人 (2<=N<=10)<br>
+                  第二行：輸入兩個字元(X,Y)和一個數值(K)，中間皆用一個空白隔開，分別代表第一個人，第二個人，以及第一個人對第二個人的熟悉度(1<=K<=10)。<br>
+                  ...<br>
+                  直到輸入 -1 結束<br>
               </section>
           </section>
+
+          <section>
+            <h3>範例輸入說明</h3>
+            <section 
+            data-no="6"
+             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                style="text-align: left"><br>
+                3 (總共有3個人，A，B，C)<br>
+                A B 3 (A 認識 B，熟悉度為 3，中間皆用一個空白隔開)<br>
+                B A 4 (B 認識 A，熟悉度為 4，中間皆用一個空白隔開)<br>
+                A C 2 (A 認識 C，熟悉度為 2，中間皆用一個空白隔開)<br>
+                C A 3 (C 認識 A，熟悉度為 3，中間皆用一個空白隔開)<br>
+                C B 3 (C 認識 B，熟悉度為 3，中間皆用一個空白隔開)<br>
+                B C 5 (B 認識 C，熟悉度為 5，中間皆用一個空白隔開)<br>
+                -1 (結束) <br>
+            </section>
+        </section>
+
+        <section>
+            <h3>輸出說明</h3>
+            <section 
+            data-no="6"
+             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                style="text-align: left"><br>
+                第一行：輸出 A 經過多少層找到 B<br>
+                第二行：輸出 A 經過哪些朋友找到 B (包括起點A和終點B)，朋友之間用一個空白隔開<br>
+                第三行：輸出 A 找到 B 所經過的最大熟悉度加總<br>
+                第四行：輸出 A 經過哪些朋友找到 B (包括起點A和終點B)﹐朋友之間用一個空白隔開<br>
+            </section>
+        </section>
+
+        <section>
+            <h3>範例輸出說明</h3>
+            <section 
+            data-no="6"
+             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                style="text-align: left"><br>
+                1 (A 僅需經過 1 層朋友關係即可認識 B (A 和 B 原本就認識))<br>
+                A B (A 和 B 原本就認識，不需經過其他朋友，朋友之間用一個空白隔開)<br>
+                5 (加總的最大熟悉度為 5)<br>
+                A C B (A 認識 C 後再透過 C 認識 B，朋友之間用一個空白隔開)<br>
+                因為A對C的熟悉度為2，C對A的熟悉度為3，所以A與C之間的熟悉度為2(取較小值)<br>
+                因為C對B的熟悉度為3，B對C的熟悉度為5，所以B與C之間的熟悉度為3(取較小值)<br>
+                當 A 認識 C，再透過 C 認識 B，會得到加總最大的熟悉度 2 + 3 = 5。<br>
+            </section>
+        </section>
 
             <section>
                 <section
@@ -150,28 +161,67 @@
                         <tr>
                           <td>測試資料一</td>
                           <td>
-                            3 0 1 4<br>0 0 0 2<br>2 0 4 0<br>1 4 0 0
+                            3<br>A B 3<br>B A 4<br>A C 2<br>C A 3<br>C B 3<br>B C 4<br>-1
                           </td>
                           <td>
-                            3 2 1 4<br>4 1 3 2<br>2 3 4 1<br>
+                            1<br>A B<br>5<br>A C B<br>
                           </td>
                         </tr>
                         <tr>
                           <td>測試資料二</td>
                           <td>
-                            1 0 4 2<br>4 0 3 0<br>0 1 0 4<br>0 0 1 0
+                            5<br>C A 3<br>A C 1<br>B C 8<br>C B 6<br>D E 1<br>E D 2<br>E B 1<br>B E 3<br>-1
                           </td>
                           <td>
-                            1 3 4 2<br>4 2 3 1<br>3 1 2 4<br>2 4 1 3
+                            2<br>A C B<br>7<br>A C B
                           </td>
+                        </tr>
+                      </table>
+                </section>
+            </section>
+
+            <section>
+                <section
+                data-no="6"
+                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left">
+                    <table style="background-color: #fff; width: 100%; font-size: 20px;">
+                        <tr>
+                        <th>輸入輸出範例</th>
+                          <th>Input</th>
+                          <th>Output</th>
                         </tr>
                         <tr>
                           <td>測試資料三</td>
                           <td>
-                            1 0 0 0<br>4 2 3 0<br>0 0 1 0<br>3 1 0 2
+                            7<br>A C 2<br>C A 8<br>A E 6<br>E A 8<br>C D 1<br>D C 8<br>E F 4<br>F E 9<br>B D 4<br>D B 3<br>F G 2<br>G F 4<br>B G 4<br>G B 5<br>-1
                           </td>
                           <td>
-                            1 3 2 4<br>4 2 3 1<br>2 4 1 3<br>3 1 4 2
+                            3<br>A C D B<br>16<br>A E F G B
+                          </td>
+                        </tr>
+                      </table>
+                </section>
+            </section>
+
+            <section>
+                <section
+                data-no="6"
+                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left">
+                    <table style="background-color: #fff; width: 100%; font-size: 20px;">
+                        <tr>
+                        <th>輸入輸出範例</th>
+                          <th>Input</th>
+                          <th>Output</th>
+                        </tr>
+                        <tr>
+                          <td>測試資料四</td>
+                          <td>
+                            6<br>A E 2<br>E A 1<br>E C 2<br>C E 1<br>D C 2<br>C D 1<br>B D 2<br>D B 1<br>A F 2<br>F A 1<br>E F 2<br>F E 1<br>-1
+                          </td>
+                          <td>
+                            4<br>A E C D B<br>5<br>A E F G B
                           </td>
                         </tr>
                       </table>
@@ -189,14 +239,7 @@
                       style="text-align: left"><br><br>
                       <section data-auto-animate>
                           <pre><code data-trim data-noescape>
-                              # 將輸入轉成二進制
-                              int(str,2)
-
-                              #將輸出轉成二進制
-                              bin(num)
-
-                              #將二進制調成固定長度
-                              .zfill(len)
+                            from collections import deque
                           </code></pre> 
                       </section>
                   </section>
@@ -214,75 +257,98 @@
                 style="text-align: left"><br><br>
                 <section data-auto-animate>
                     <pre><code data-trim data-noescape data-line-numbers="|1-17|">
-                        def rowValueSet(row,matrix):
-                            totalSet = {"1","2","3","4"}
-                            return totalSet-set(matrix[row])
+                        from collections import deque
 
-                        def colValueSet(column,matrix):
-                            totalSet = {"1","2","3","4"}
-                            eleSet = set()
-                            for i in range(4):
-                                eleSet.add(matrix[i][column])
-                            return totalSet - eleSet
+                        def find_shortest_path(graph, start, end):
+                            visited = set()
+                            queue = deque([[start, [start]]])
 
-                        def areaValueSet(Area,matrix):
-                            totalSet = {"1","2","3","4"}
-                            eleSet = set()
-                            rowOffset = 0
-                            colOffset = 0
+                            while queue:
+                                node, path = queue.popleft()
+                                if node not in visited:
+                                    visited.add(node)
+                                    neighbors = graph[node]
+                                    for neighbor, weight in neighbors:
+                                        if neighbor == end:
+                                            return path + [neighbor]
+                                        else:
+                                            queue.append([neighbor, path + [neighbor]])
 
-                            elif(area==2):
-                                colOffset=2
-                            elif(area==3):
-                                rowOffset=2
-                            elif(area==4):
-                                rowOffset=2
-                                colOffset=2
-                                
-                            eleSet.add(matrix[0+rowOffset][0+colOffset])
-                            eleSet.add(matrix[0+rowOffset][1+colOffset])
-                            eleSet.add(matrix[1+rowOffset][0+colOffset])
-                            eleSet.add(matrix[1+rowOffset][1+colOffset])
-                            return totalSet - eleSet
+                        def dfs(node, end, graph, path, familiarity):
+                            if node == end:
+                                return familiarity, path[:]
 
-                        def getValue(i,j,matrix):
-                            area = 0
-                            if (i > 1):
-                                if(j > 1):
-                                    area = 4
+                            max_familiarity = 0
+                            max_familiar_path = []
+
+                            for neighbor, weight in graph[node]:
+                                if neighbor not in path:
+                                    new_familiarity, new_path = dfs(neighbor, end, graph, path + [neighbor], familiarity + weight)
+                                    if new_familiarity > max_familiarity:
+                                        max_familiarity = new_familiarity
+                                        max_familiar_path = new_path
+
+                            return max_familiarity, max_familiar_path
+
+                        def find_max_familiar_path(graph, start, end):
+                            max_familiarity, max_familiar_path = dfs(start, end, graph, [start], 0)
+                            return max_familiarity, max_familiar_path
+
+                        def func(relationships):
+                            start_user = 'A'
+                            end_user = 'B'
+                            shortest_path = find_shortest_path(relationships, start_user, end_user)
+                            max_familiarity, max_familiar_path = find_max_familiar_path(relationships, start_user, end_user)
+
+                            print(len(shortest_path)-1)
+                            print(' '.join(shortest_path))
+                            print(max_familiarity)
+                            print(' '.join(max_familiar_path))
+
+                        def inDic(target, itemList):
+                            for item in itemList:
+                                if item[0] == target:
+                                    return True
+                            return False
+
+                        def update(relationships, start, target, familiarity):
+
+                            for item in relationships[start]:
+                                if item[0] == target:
+                                    if item[1] > familiarity:
+                                        item[1] = familiarity
+                                        return
+
+                        def setInput():
+                            N = int(input())
+                            relationships = {}
+
+                            while True:
+                                content = input()
+                                if content == '-1':
+                                    return relationships
+                                list = [str(i) for i in content.split()]
+                                start = list[0]
+                                end = list[1]
+                                familiarity = int(list[2])
+
+                                if start not in relationships:
+                                    relationships[start] = []
+
+                                if end not in relationships:
+                                    relationships[end] = []
+
+
+                                if inDic(end, relationships[start]) and inDic(start, relationships[end]):
+                                    update(relationships, start, end, familiarity)
+                                    update(relationships, end, start, familiarity)
                                 else:
-                                    area = 3
-                            else:
-                                if(j > 1):
-                                    area = 2
-                                else:
-                                    area = 1
-                            putSet = rowValueSet(i,matrix) & colValueSet(j,matrix) & areaValueSet(area,matrix)
-                            if len(putSet) == 1:
-                                return putSet.pop()
-                            else:
-                                return 0
-                        def printMatrix(matrix):
-                            for row in matrix:
-                                print(" ".join(row))
-                        
-                        def main():
-                            initMatrix = [[ x for x in input().split()] for i in range(4)]
-                            needCount = sum([row.count("0")  for row in initMatrix])
-                            solCount = 0
-                            while solCount < needCount:
-                                for i in range(4):
-                                    for j in range(4):
-                                        if(initMatrix[i][j] == "0"):
-                                            value = getValue(i,j,initMatrix)
-                                            if value != 0:
-                                                initMatrix[i][j] = value
-                                                solCount += 1
-                        
-                            printMatrix(initMatrix)
-                        
-                        if __name__ == '__main__':
-                            main()
+                                    relationships[start].append([end, familiarity])
+                                    relationships[end].append([start, familiarity])
+
+                        if __name__ == "__main__":
+                            relationships = setInput()
+                            func(relationships)
                     </code></pre> 
                 </section>
             </section>
