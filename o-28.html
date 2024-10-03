@@ -213,8 +213,6 @@
                 style="text-align: left"><br><br>
                 <section data-auto-animate>
                     <pre><code data-trim data-noescape>
-                      #028 字串操作
-
                       def mergeABcreateC(A,B):
                           return A+" "+B
                       
@@ -229,10 +227,13 @@
                           return len(string1)
                       
                       def replaceXtoY(X,Y,string1):
+                          # 將字用空格拆開
                           temp=string1.split(" ")
                           result=""
+                          # 判斷每個字
                           for i in range(len(temp)):
                               word=temp[i]
+                              # 無視單字大小寫差異做比對(全轉成大寫做比對)
                               if(word.upper()==X.upper()):
                                   result+=Y
                               else:
@@ -247,6 +248,7 @@
                           for i in range(len(temp)):
                               word=temp[i]
                               if(word==Y):
+                                  # 把Y倒置
                                   result+=Y[-1:0:-1]+Y[0]
                               else:
                                   result+=temp[i]
@@ -257,6 +259,7 @@
                       def contentbetweenN(N,string1):
                           result=""
                           prechar=""
+                          # 每隔N個輸出
                           for i in range(0,len(string1),N):
                               if(prechar!=" " or string1[i]!=" "):
                                   result+=string1[i]
