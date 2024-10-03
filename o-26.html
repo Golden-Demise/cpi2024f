@@ -278,38 +278,51 @@
                     <pre><code data-trim data-noescape data-line-numbers="|1-17|3-4|19-27|5-7|29-37|53-63|8-10|39-51|11-12|65-70|91-112|114-120|122-131|133-151|153-171|173-187|189-212|13-16|72-89|">
                         import math
 
+                        # 每名確診者每日能夠傳染的人數x
                         def inflectCompute(inFect,recoverDays,protectedRate):
-                            # print("InflectRate:",(inFect/recoverDays) * (1-protectedRate))
                             return (inFect/recoverDays) * (1-protectedRate)
 
                         def main():
+                            # 總人口n
                             n = int(input())
+                            # 計算期間m
                             period = int(input())
+                            # 第一天確診人數a
                             initInfect = int(input())
+                            # 每位確診者在確診期間的傳染人數b
                             RValue = float(input())
+                            # 康復天數c
                             recoverDays = int(input())
+                            # 第一天A城市的免疫率d
                             protectedRate = float(input())
+                            # 可以感染的人數
                             canInfectPeople = int(n * (1-protectedRate) - initInfect)
+                            # 計算期間list設定
                             dayAddInfect = [0] * period
                             dayAddInfect[0] = initInfect
                             dayTotalInfect = [0] * period
                             dayTotalInfect[0] = initInfect
+
                             for day in range(1,period):
                                 startDay = day - recoverDays
-                                if startDay < 0:
+                                if startDay &lt; 0:
                                     startDay = 0
                                     curePeople = 0
                                 elif startDay >= 0:
                                     curePeople = dayAddInfect[startDay]
-
-                                
+                                # 每天的新增確診數y
                                 dayAdd = dayTotalInfect[day-1] * inflectCompute(RValue,recoverDays,protectedRate)
+                                # 無條件捨去小數
                                 dayAdd = math.floor(dayAdd)
+                                # 假設每天的新增確診數大於可傳染人數，將每天新增確診數=可傳染人數
                                 if dayAdd > canInfectPeople:
                                     dayAdd = canInfectPeople
+                                # 可傳染人數-每天新增確診數
                                 canInfectPeople = canInfectPeople - dayAdd
                                 dayAddInfect[day] = dayAdd
+                                # 計算總確診數
                                 dayTotalInfect[day] = sum(dayAddInfect[startDay:day+1]) - curePeople
+                                # 重新計算免疫率
                                 protectedRate += curePeople/n
                             
                             for day in range(period):
