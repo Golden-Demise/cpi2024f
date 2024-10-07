@@ -295,72 +295,140 @@
                     <pre><code data-trim data-noescape data-line-numbers="|135-136|104-116|13-38|16-19|2-11|118-119|121-122|123-129|40-102|44-56|130-132|">
                         # 判斷課程輸入是否符合規格
                         def check(k):
-                            # 檢查課程代碼的第一個字元是否在 '1' 到 '5' 之間
-                            if '1' <= k[0] <= '5':
-                                # 檢查第二個字元是否在 '1' 到 '9' 之間
-                                if '1' <= k[1] <= '9':
+                            # 檢查課程代碼的第一個字符是否在 '1' 到 '5' 之間
+                            if('1' <= k[0] and k[0]<='5'):
+                                # 檢查第二個字符是否在 '1' 到 '9' 之間
+                                if('1' <= k[1] and k[1] <= '9'):
                                     return True
-                                # 或者第二個字元是否為 'a', 'b', 或 'c'
-                                elif k[1] in ('a', 'b', 'c'):
+                                # 或者檢查第二個字符是否為 'a', 'b', 或 'c'
+                                elif(k[1]=='a' or k[1]=='b' or k[1]=='c'):
                                     return True
                                 else:
                                     return False
                             else:
                                 return False
                         
-                        # 輸入N門課程的時間資訊
+                        # 輸入N門課程的資訊
                         def input_times(n):
-                            times_list = []  # 儲存課程時間的列表
-                            flag = True      # 標記課程是否衝堂
-                            for _ in range(n):
-                                k = input()           # 輸入一個時間
-                                if check(k):
-                                    times_list.append(k)  # 如果輸入正確，加入列表
-                                else:
-                                    flag = False          # 輸入不符合規格，標記為False
-                            return times_list, flag       # 返回時間列表和標記
+                            list = []   # 用於儲存課程時間的列表
+                            flag = True # 標記輸入是否符合規格
+                            if (n == 1):
+                                k = input()           # 輸入第一個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                            elif (n == 2):
+                                k = input()           # 輸入第一個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                                k = input()           # 輸入第二個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                            elif (n == 3):
+                                k = input()           # 輸入第一個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                                k = input()           # 輸入第二個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                                k = input()           # 輸入第三個時間
+                                flag = flag and check(k) # 檢查時間是否符合規格
+                                list.append(k)       # 將時間加入列表
+                            return list,flag           # 返回時間列表和標記
                         
-                        # 判斷兩門課程是否有衝堂
+                        # 判斷課程是否有衝堂
                         def Conflict(courseID1, list1, courseID2, list2):
+                        
                             flag = True  # 初始假設沒有衝突
                         
-                            # 檢查list1中的每個時間是否出現在list2中
-                            for time in list1:
-                                if time in list2:
-                                    flag = False
-                                    print('{}, {}, {}'.format(courseID1, courseID2, time))
-                            return flag
+                            # 判斷第一門課程的時間列表長度
+                            if(len(list1)==1):
+                                if(len(list2)==1):
+                                    if(list1[0]==list2[0]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                elif(len(list2)==2):
+                                    if(list1[0]==list2[0] or list1[0]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                elif(len(list2)==3):
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                            elif(len(list1)==2):
+                                if(len(list2)==1):
+                                    if(list1[0]==list2[0] or list1[1]==list2[0]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                elif(len(list2)==2):
+                                    if(list1[0]==list2[0] or list1[0]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                    if(list1[1]==list2[0] or list1[1]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[1]))
+                                elif (len(list2) == 3):
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[1]))
+                            elif (len(list1) == 3):
+                                if (len(list2) == 1):
+                                    if (list1[0]==list2[0] or list1[1]==list2[0] or list1[2]==list2[0]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                elif (len(list2) == 2):
+                                    if (list1[0]==list2[0] or list1[0]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                    if (list1[1]==list2[0] or list1[1]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[1]))
+                                    if (list1[2]==list2[0] or list1[2]==list2[1]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[2]))
+                                elif (len(list2) == 3):
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[0]))
+                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[1]))
+                                    if (list1[2]==list2[0] or list1[2]==list2[1] or list1[2]==list2[2]):
+                                        flag = False
+                                        print('{},{},{}'.format(courseID1, courseID2, list1[2]))
+                        
+                            return flag  # 返回是否沒有衝突
                         
                         def func():
-                            # 輸入第一門課程的ID和時間數量
-                            course_a_id = input()
-                            course_a_length = int(input())
-                            course_a_time, flag1 = input_times(course_a_length)
+                            # 輸入三門課程
+                            course_a_id = input()                  # 輸入第一門課程的ID
+                            course_a_length = int(input())         # 輸入第一門課程的時間數量
+                            course_a_time,flag1 = input_times(course_a_length)  # 輸入第一門課程的時間資訊並檢查
                         
-                            # 輸入第二門課程的ID和時間數量
-                            course_b_id = input()
-                            course_b_length = int(input())
-                            course_b_time, flag2 = input_times(course_b_length)
+                            course_b_id = input()                  # 輸入第二門課程的ID
+                            course_b_length = int(input())         # 輸入第二門課程的時間數量
+                            course_b_time,flag2 = input_times(course_b_length)  # 輸入第二門課程的時間資訊並檢查
                         
-                            # 輸入第三門課程的ID和時間數量
-                            course_c_id = input()
-                            course_c_length = int(input())
-                            course_c_time, flag3 = input_times(course_c_length)
+                            course_c_id = input()                  # 輸入第三門課程的ID
+                            course_c_length = int(input())         # 輸入第三門課程的時間數量
+                            course_c_time,flag3 = input_times(course_c_length)  # 輸入第三門課程的時間資訊並檢查
                             
-                            # 判斷所有課程的輸入是否都符合規格
-                            Flag = flag1 and flag2 and flag3
+                            # 把回傳的flag做判斷
+                            Flag = ((flag1 and flag2) and flag3)  # 確認所有課程的時間輸入是否都符合規格
                         
-                            if not Flag:
-                                print("-1")  # 如果有任何輸入不符合規格，輸出 -1
+                            if(Flag==False):
+                                print("-1")  # 如果有任何一門課程的時間輸入不符合規格，輸出 -1
                             else:
-                                # 判斷三門課程之間是否有衝堂
-                                isCorrect1 = Conflict(course_a_id, course_a_time, course_b_id, course_b_time)
-                                isCorrect2 = Conflict(course_a_id, course_a_time, course_c_id, course_c_time)
-                                isCorrect3 = Conflict(course_b_id, course_b_time, course_c_id, course_c_time)
+                                # 判斷課程是否有衝堂
+                                isCorrect1 = Conflict(course_a_id, course_a_time, course_b_id, course_b_time)  # 檢查課程A與課程B是否衝堂
+                                isCorrect2 = Conflict(course_a_id, course_a_time, course_c_id, course_c_time)  # 檢查課程A與課程C是否衝堂
+                                isCorrect3 = Conflict(course_b_id, course_b_time, course_c_id, course_c_time)  # 檢查課程B與課程C是否衝堂
                         
-                                # 如果沒有任何衝堂，輸出 "correct"
-                                isCorrect = isCorrect1 and isCorrect2 and isCorrect3
-                                if isCorrect:
+                                isCorrect = ((isCorrect1 and isCorrect2) and isCorrect3)  # 確認所有課程之間是否沒有衝堂
+                                # 沒有衝堂的話就輸出 "correct"
+                                if(isCorrect):
                                     print("correct")
                         
                         # 主程式入口
