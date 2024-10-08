@@ -313,63 +313,62 @@
                         def Conflict(courseID1, list1, courseID2, list2):
                         
                             flag = True  # 初始假設沒有衝突
-                        
-                            # 判斷第一門課程的時間列表長度
-                            if(len(list1)==1):
-                                if(len(list2)==1):
-                                    if(list1[0]==list2[0]):
+                            
+                            if(len(list1)==1): # 如果第一堂課的長度是1
+                                if(len(list2)==1): # 如果第二堂課的長度是1
+                                    if(list1[0]==list2[0]): # 判斷第一堂課的第一節和第二堂課的第一節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                elif(len(list2)==2):
-                                    if(list1[0]==list2[0] or list1[0]==list2[1]):
+                                elif(len(list2)==2): # 如果第二堂課的長度是2
+                                    if(list1[0]==list2[0] or list1[0]==list2[1]): # 判斷第一堂課的第一節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                elif(len(list2)==3):
-                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                elif(len(list2)==3): # 如果第二堂課的長度是3
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]): # 判斷第一堂課的第一節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                            elif(len(list1)==2):
-                                if(len(list2)==1):
-                                    if(list1[0]==list2[0] or list1[1]==list2[0]):
+                            elif(len(list1)==2): # 如果第一堂課的長度是2
+                                if(len(list2)==1): # 如果第二堂課的長度是1
+                                    if(list1[0]==list2[0] or list1[1]==list2[0]): # 判斷第一堂課的第一、二節和第二堂課的第一節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                elif(len(list2)==2):
-                                    if(list1[0]==list2[0] or list1[0]==list2[1]):
+                                elif(len(list2)==2): # 如果第二堂課的長度是2
+                                    if(list1[0]==list2[0] or list1[0]==list2[1]): # 判斷第一堂課的第一節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                    if(list1[1]==list2[0] or list1[1]==list2[1]):
+                                    if(list1[1]==list2[0] or list1[1]==list2[1]): # 判斷第一堂課的第二節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[1]))
-                                elif (len(list2) == 3):
-                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                elif (len(list2) == 3): # 如果第二堂課的長度是3
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):  # 判斷第一堂課的第一節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]):
+                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]): # 判斷第一堂課的第二節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[1]))
-                            elif (len(list1) == 3):
-                                if (len(list2) == 1):
-                                    if (list1[0]==list2[0] or list1[1]==list2[0] or list1[2]==list2[0]):
+                            elif (len(list1) == 3): # 如果第一堂課的長度是3
+                                if (len(list2) == 1): # 如果第二堂課的長度是1
+                                    if (list1[0]==list2[0] or list1[1]==list2[0] or list1[2]==list2[0]): # 判斷第一堂課的第一、二、三節和第二堂課的第一節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                elif (len(list2) == 2):
-                                    if (list1[0]==list2[0] or list1[0]==list2[1]):
+                                elif (len(list2) == 2): # 如果第二堂課的長度是2
+                                    if (list1[0]==list2[0] or list1[0]==list2[1]): # 判斷第一堂課的第一節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                    if (list1[1]==list2[0] or list1[1]==list2[1]):
+                                    if (list1[1]==list2[0] or list1[1]==list2[1]): # 判斷第一堂課的第二節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[1]))
-                                    if (list1[2]==list2[0] or list1[2]==list2[1]):
+                                    if (list1[2]==list2[0] or list1[2]==list2[1]): # 判斷第一堂課的第三節和第二堂課的第一、二節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[2]))
-                                elif (len(list2) == 3):
-                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]):
+                                elif (len(list2) == 3): # 如果第二堂課的長度是1
+                                    if (list1[0]==list2[0] or list1[0]==list2[1] or list1[0]==list2[2]): # 判斷第一堂課的第一節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[0]))
-                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]):
+                                    if (list1[1]==list2[0] or list1[1]==list2[1] or list1[1]==list2[2]): # 判斷第一堂課的第二節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[1]))
-                                    if (list1[2]==list2[0] or list1[2]==list2[1] or list1[2]==list2[2]):
+                                    if (list1[2]==list2[0] or list1[2]==list2[1] or list1[2]==list2[2]): # 判斷第一堂課的第三節和第二堂課的第一、二、三節是否衝堂
                                         flag = False
                                         print('{},{},{}'.format(courseID1, courseID2, list1[2]))
                         
