@@ -226,13 +226,6 @@
                             elif count == 0: # 如果完全沒找到基因
                                 print('No gene')
                         
-                        def checkDNA(s):
-                            # 檢查 DNA 字串是否只包含 A, T, G, C
-                            for i in s:
-                                if i not in ['A','T','G','C']:
-                                    return True
-                            return False
-                        
                         # 讀取起始標籤
                         fTag = input()
                         # 讀取終止標籤，並以空格分隔
