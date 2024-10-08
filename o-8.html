@@ -52,8 +52,11 @@
         .controls {
             bottom: 24px !important;
         }
-        table, th, td {
-            border:1px solid black;
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -70,9 +73,7 @@
             -->
             <section>
                 <h3>8. 衝堂</h3>
-                <section 
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                     style="text-align: left"><br>
                     <br>&emsp;&emsp;請檢查輸入的三門課程是否衝堂。<br>
                     &emsp;&emsp;&emsp;&emsp;依序輸入 :<br>
@@ -83,146 +84,129 @@
             </section>
 
             <section>
-              <h3>輸入輸出說明</h3>
-              <section 
-              data-no="6"
-               data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                  style="text-align: left"><br>
-                  &emsp;&emsp;輸入說明<br>
-                  &emsp;&emsp;輸入三門課程的資訊<br>
-                  &emsp;&emsp;每一門課程的資訊<br>
-                  &emsp;&emsp;&emsp;&emsp;第一行 : 輸入課程編號(字串)<br>
-                  &emsp;&emsp;&emsp;&emsp;第二行 : 上課小時數 H (整數，1<=H<=3)<br><br>
-                  &emsp;&emsp;&emsp;&emsp;接下來有 H 行<br><br>
-                  &emsp;&emsp;&emsp;&emsp;每一行為一個字串，第一個字元表示星期幾，第二個字元表示第幾節<br><br>
-                  &emsp;&emsp;輸出說明<br>
-                  &emsp;&emsp;&emsp;&emsp;輸入任何錯誤，輸出 -1<br>
-                  &emsp;&emsp;&emsp;&emsp;若無發生衝堂，則輸出correct<br><br>
-                  &emsp;&emsp;&emsp;&emsp;若發生衝堂 :<br>
-                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;輸出所有衝堂的課程，每次輸出兩個衝堂的課程編號，<br>
-                  &emsp;&emsp;&emsp;&emsp;以及在哪一天的哪一節衝突，參考下列格式 :<br>
-                  {課程1編號},{課程2編號},{衝堂在哪天哪節}先輸入的課程為課程1，後輸入的課程為課程2<br>
-              </section>
-          </section>
-
-          <section>
-            <h3>輸入範例解釋</h3>
-            <section 
-            data-no="6"
-             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                style="text-align: left"><br>
-                &emsp;&emsp;Chinese1001 (第一門課課程編號)<br>
-                &emsp;&emsp;3 (3小時，每節課1小時)<br>
-                &emsp;&emsp;11 (星期1 第1節課)<br>
-                &emsp;&emsp;12 (星期1 第2節課)<br>
-                &emsp;&emsp;13 (星期1 第3節課)<br>
-                &emsp;&emsp;English1002 (第二門課課程編號)<br>
-                &emsp;&emsp;3 (3小時，每節課1小時)<br>
-                &emsp;&emsp;21 (星期2 第1節課)<br>
-                &emsp;&emsp;22 (星期2 第2節課)<br>
-                &emsp;&emsp;23 (星期2 第3節課)<br>
-                &emsp;&emsp;Math1003 (第三門課課程編號)<br>
-                &emsp;&emsp;3 (3小時，每節課1小時)<br>
-                &emsp;&emsp;31 (星期3 第1節課)<br>
-                &emsp;&emsp;32 (星期3 第2節課)<br>
-                &emsp;&emsp;13 (星期1 第3節課)<br>
-            </section>
-        </section>
-
-        <section>
-          <h3>輸出範例解釋</h3>
-          <section 
-          data-no="6"
-           data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-              style="text-align: left"><br>
-              &emsp;&emsp;Chinese1001,Math1003,13<br>
-              &emsp;&emsp;(課程Chinese1001跟課程Math1003，在星期1第3節衝堂，因課程Chinese1001先輸入，所以課程Chinese1001放前面)<br>
-          </section>
-      </section>
-
-            <section>
-                <h3>衝堂 輸入輸出範例-1</h3>
-                <section
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                    style="text-align: left">
-                    <table style="background-color: #fff; width: 50%;">
-                        <tr>
-                          <th>Input</th>
-                          <th>Output</th>
-                        </tr>
-                        <tr>
-                          <td>
-                            Programming1002<br>2<br>3b<br>4c<br>Biology1003<br>2<br>11<br>3b<br>Math3003<br>2<br>11<br>3b
-                          </td>
-                          <td>
-                            Programming1002,Biology1003,3b<br>Programming1002,Math3003,3b<br>Biology1003,Math3003,11<br>Biology1003,Math3003,3b
-                          </td>
-                        </tr>
-                      </table>
+                <h3>輸入輸出說明</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br>
+                    &emsp;&emsp;輸入說明<br>
+                    &emsp;&emsp;輸入三門課程的資訊<br>
+                    &emsp;&emsp;每一門課程的資訊<br>
+                    &emsp;&emsp;&emsp;&emsp;第一行 : 輸入課程編號(字串)<br>
+                    &emsp;&emsp;&emsp;&emsp;第二行 : 上課小時數 H (整數，1<=H<=3)<br><br>
+                        &emsp;&emsp;&emsp;&emsp;接下來有 H 行<br><br>
+                        &emsp;&emsp;&emsp;&emsp;每一行為一個字串，第一個字元表示星期幾，第二個字元表示第幾節<br><br>
+                        &emsp;&emsp;輸出說明<br>
+                        &emsp;&emsp;&emsp;&emsp;輸入任何錯誤，輸出 -1<br>
+                        &emsp;&emsp;&emsp;&emsp;若無發生衝堂，則輸出correct<br><br>
+                        &emsp;&emsp;&emsp;&emsp;若發生衝堂 :<br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;輸出所有衝堂的課程，每次輸出兩個衝堂的課程編號，<br>
+                        &emsp;&emsp;&emsp;&emsp;以及在哪一天的哪一節衝突，參考下列格式 :<br>
+                        {課程1編號},{課程2編號},{衝堂在哪天哪節}先輸入的課程為課程1，後輸入的課程為課程2<br>
                 </section>
             </section>
 
             <section>
-              <h3>衝堂 輸入輸出範例-2</h3>
-              <section
-              data-no="6"
-               data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                  style="text-align: left">
-                  <table style="background-color: #fff; width: 50%;">
-                      <tr>
-                        <th>Input</th>
-                        <th>Output</th>
-                      </tr>
-                      <tr>
-                        <td>
-                          Physics3000<br>1<br>37<br>Biology2004<br>3<br>2a<br>2b<br>2c<br>Chemistry1003<br>1<br>1c
-                        </td>
-                        <td>
-                          correct
-                        </td>
-                      </tr>
-                    </table>
-              </section>
-          </section>
-
-          <section>
-            <h3>衝堂 輸入輸出範例-3</h3>
-            <section
-            data-no="6"
-             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                style="text-align: left">
-                <table style="background-color: #fff; width: 50%;">
-                    <tr>
-                      <th>Input</th>
-                      <th>Output</th>
-                    </tr>
-                    <tr>
-                      <td>
-                        Math1011<br>1<br>46<br>Chinese1002<br>2<br>45<br>46<br>English1003<br>2<br>61<br>5a
-                      </td>
-                      <td>
-                        -1
-                      </td>
-                    </tr>
-                  </table>
+                <h3>輸入範例解釋</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br>
+                    &emsp;&emsp;Chinese1001 (第一門課課程編號)<br>
+                    &emsp;&emsp;3 (3小時，每節課1小時)<br>
+                    &emsp;&emsp;11 (星期1 第1節課)<br>
+                    &emsp;&emsp;12 (星期1 第2節課)<br>
+                    &emsp;&emsp;13 (星期1 第3節課)<br>
+                    &emsp;&emsp;English1002 (第二門課課程編號)<br>
+                    &emsp;&emsp;3 (3小時，每節課1小時)<br>
+                    &emsp;&emsp;21 (星期2 第1節課)<br>
+                    &emsp;&emsp;22 (星期2 第2節課)<br>
+                    &emsp;&emsp;23 (星期2 第3節課)<br>
+                    &emsp;&emsp;Math1003 (第三門課課程編號)<br>
+                    &emsp;&emsp;3 (3小時，每節課1小時)<br>
+                    &emsp;&emsp;31 (星期3 第1節課)<br>
+                    &emsp;&emsp;32 (星期3 第2節課)<br>
+                    &emsp;&emsp;13 (星期1 第3節課)<br>
+                </section>
             </section>
-        </section>
+
+            <section>
+                <h3>輸出範例解釋</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br>
+                    &emsp;&emsp;Chinese1001,Math1003,13<br>
+                    &emsp;&emsp;(課程Chinese1001跟課程Math1003，在星期1第3節衝堂，因課程Chinese1001先輸入，所以課程Chinese1001放前面)<br>
+                </section>
+            </section>
+
+            <section>
+                <h3>衝堂 輸入輸出範例-1</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left">
+                    <table style="background-color: #fff; width: 50%;">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Programming1002<br>2<br>3b<br>4c<br>Biology1003<br>2<br>11<br>3b<br>Math3003<br>2<br>11<br>3b
+                            </td>
+                            <td>
+                                Programming1002,Biology1003,3b<br>Programming1002,Math3003,3b<br>Biology1003,Math3003,11<br>Biology1003,Math3003,3b
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+
+            <section>
+                <h3>衝堂 輸入輸出範例-2</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left">
+                    <table style="background-color: #fff; width: 50%;">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Physics3000<br>1<br>37<br>Biology2004<br>3<br>2a<br>2b<br>2c<br>Chemistry1003<br>1<br>1c
+                            </td>
+                            <td>
+                                correct
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+
+            <section>
+                <h3>衝堂 輸入輸出範例-3</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left">
+                    <table style="background-color: #fff; width: 50%;">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Math1011<br>1<br>46<br>Chinese1002<br>2<br>45<br>46<br>English1003<br>2<br>61<br>5a
+                            </td>
+                            <td>
+                                -1
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
 
             <section>
                 <h3>Tips</h3>
-                    <section
-                        data-no="8"
-                        data-positionx="0.8" 
-                        data-positiony="0.03" 
-                        data-scale="1" 
-                        data-motionno="0"
-                        style="text-align: left"><br><br>
-                        &emsp;&emsp;利用多個function<br>
-                        &emsp;&emsp;來將整個問題分成小部份去做處理<br>
-                        &emsp;&emsp;同時提高可視性
-                        <section data-auto-animate>
-                            <pre><code data-trim data-noescape>
+                <section data-no="8" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br><br>
+                    &emsp;&emsp;利用多個function<br>
+                    &emsp;&emsp;來將整個問題分成小部份去做處理<br>
+                    &emsp;&emsp;同時提高可視性
+                    <section data-auto-animate>
+                        <pre><code data-trim data-noescape>
                               def check(k):
                                 #
                                 # 判斷課程輸入是否符合規格
@@ -242,57 +226,47 @@
                                 #
                                 # 主程式在這
                                 #
-                            </code></pre> 
-                        </section>
+                            </code></pre>
                     </section>
                 </section>
             </section>
+            </section>
 
             <section>
-              <h3>Tips</h3>
-                  <section
-                      data-no="8"
-                      data-positionx="0.8" 
-                      data-positiony="0.03" 
-                      data-scale="1" 
-                      data-motionno="0"
-                      style="text-align: left"><br><br>
-                      &emsp;&emsp;使用List(列表、序列)儲存資訊<br>
-                      &emsp;&emsp;List為Python基本的數據結構，List中每個元素都分配一個數字、他的位置或索引。<br>
-                      &emsp;&emsp;第一個索引是0，第二個索引是1，以此類推<br>
-                      &emsp;&emsp;要宣告list，使用中括號[]，如下
-                      <section data-auto-animate>
-                          <pre><code data-trim data-noescape>
+                <h3>Tips</h3>
+                <section data-no="8" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br><br>
+                    &emsp;&emsp;使用List(列表、序列)儲存資訊<br>
+                    &emsp;&emsp;List為Python基本的數據結構，List中每個元素都分配一個數字、他的位置或索引。<br>
+                    &emsp;&emsp;第一個索引是0，第二個索引是1，以此類推<br>
+                    &emsp;&emsp;要宣告list，使用中括號[]，如下
+                    <section data-auto-animate>
+                        <pre><code data-trim data-noescape>
                             list = ['physics', 'chemistry']
                             list[0] = 'physics'
                             list[1] = 'chemistry'
-                          </code></pre> 
-                      </section>
-                      &emsp;&emsp;要往後新增元素的話，使用append<br>
-                      <section data-auto-animate>
+                          </code></pre>
+                    </section>
+                    &emsp;&emsp;要往後新增元素的話，使用append<br>
+                    <section data-auto-animate>
                         <pre><code data-trim data-noescape>
                           list.append('Programming')
                           list = ['physics', 'chemistry', 'Programming']
-                        </code></pre> 
+                        </code></pre>
                     </section>
                     &emsp;&emsp;還有其他操作想要理解的話，可以參考下面網站<br>
                     &emsp;&emsp;<a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html">這個連結</a><br>
-                  </section>
-              </section>
-          </section>
+                </section>
+            </section>
+            </section>
 
-          <section>
-            <h3 >解答</h3>
-            <section
-                data-no="8"
-                data-positionx="0.8" 
-                data-positiony="0.03" 
-                data-scale="1" 
-                data-motionno="0"
-                style="text-align: left"><br><br>
-                &emsp;&emsp;土法煉鋼<br>
-                <section data-auto-animate>
-                    <pre><code data-trim data-noescape data-line-numbers="|135-136|104-116|13-38|16-19|2-11|118-119|121-122|123-129|40-102|44-56|130-132|">
+            <section>
+                <h3>解答</h3>
+                <section data-no="8" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br><br>
+                    &emsp;&emsp;土法煉鋼<br>
+                    <section data-auto-animate>
+                        <pre><code data-trim data-noescape>
                         # 判斷課程輸入是否符合規格
                         def check(k):
                             # 檢查課程代碼的第一個字符是否在 '1' 到 '5' 之間
@@ -434,10 +408,10 @@
                         # 主程式入口
                         if __name__ == '__main__':
                             func()
-                    </code></pre> 
+                    </code></pre>
+                    </section>
                 </section>
             </section>
-           </section>
         </div>
     </div>
     <div id="pageIndex"></div>
