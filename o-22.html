@@ -52,8 +52,11 @@
         .controls {
             bottom: 24px !important;
         }
-        table, th, td {
-            border:1px solid black;
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -70,141 +73,129 @@
             -->
             <section>
                 <h3>22. 梭哈比大小</h3>
-                <section 
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                     style="text-align: left"><br>
                     <br>&emsp;&emsp;1.由N(2<=N<=5，N為整數)個玩家依序輪流拿牌。<br>
-                    <br>&emsp;&emsp;2.每人拿五張，結果依牌型由大到小輸出玩家名稱和其牌型編號，若牌型相同，依據輸入順序輸出。<br>
-                    <br>&emsp;&emsp;3.每張牌由牌面與花色組成，牌面與花色的表示如下：<br>
-                    &emsp;&emsp;&emsp;&emsp;牌面： A、2~10、J、Q、K<br>
-                    &emsp;&emsp;&emsp;&emsp;花色：S (Spade,黑桃),H (Heart,紅心),D (Diamond,方塊), C (Club,梅花)<br>
-                    &emsp;&emsp;&emsp;&emsp;例如：7S 表示黑桃7<br>
-               <br>
+                        <br>&emsp;&emsp;2.每人拿五張，結果依牌型由大到小輸出玩家名稱和其牌型編號，若牌型相同，依據輸入順序輸出。<br>
+                        <br>&emsp;&emsp;3.每張牌由牌面與花色組成，牌面與花色的表示如下：<br>
+                        &emsp;&emsp;&emsp;&emsp;牌面： A、2~10、J、Q、K<br>
+                        &emsp;&emsp;&emsp;&emsp;花色：S (Spade,黑桃),H (Heart,紅心),D (Diamond,方塊), C (Club,梅花)<br>
+                        &emsp;&emsp;&emsp;&emsp;例如：7S 表示黑桃7<br>
+                        <br>
                 </section>
             </section>
 
             <section>
                 <h3>20. 數字矩陣</h3>
-                <section 
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                     style="text-align: left"><br>
                     <br>&emsp;&emsp;4.牌型編號(編號越大代表牌型越大)：<br>
-                    &emsp;&emsp;&emsp;&emsp;(1)	High Card : 單一張牌。<br>
-                    &emsp;&emsp;&emsp;&emsp;(2)	One pair: 兩張牌數字一樣<br>
-                    &emsp;&emsp;&emsp;&emsp;(3)	Two pairs : 兩組 Pair 的牌。<br>
-                    &emsp;&emsp;&emsp;&emsp;(4)	Three of a kind : 三張牌數字一樣。<br>
-                    &emsp;&emsp;&emsp;&emsp;(5)	Straight : 數字連續的五張牌，頭尾相接亦視為Straight。例如[2, 3, 4, 5, 6],..,[Q,K , A, 2, 3], [K , A, 2, 3, 4], [A, 2, 3, 4, 5]。<br>
-                    &emsp;&emsp;&emsp;&emsp;(6)	Flush : 五張同一花色的牌<br>
-                    &emsp;&emsp;&emsp;&emsp;(7)	Full House : Three of a Kind 加一個 Pair<br>
-                    &emsp;&emsp;&emsp;&emsp;(8)	Four of a kind: : 四張牌數字一樣<br>
-                    &emsp;&emsp;&emsp;&emsp;(9)	Straight flush : 數字連續的五張牌且花色一樣<br>
-               <br>
+                    &emsp;&emsp;&emsp;&emsp;(1) High Card : 單一張牌。<br>
+                    &emsp;&emsp;&emsp;&emsp;(2) One pair: 兩張牌數字一樣<br>
+                    &emsp;&emsp;&emsp;&emsp;(3) Two pairs : 兩組 Pair 的牌。<br>
+                    &emsp;&emsp;&emsp;&emsp;(4) Three of a kind : 三張牌數字一樣。<br>
+                    &emsp;&emsp;&emsp;&emsp;(5) Straight : 數字連續的五張牌，頭尾相接亦視為Straight。例如[2, 3, 4, 5, 6],..,[Q,K , A, 2,
+                    3], [K , A, 2, 3, 4], [A, 2, 3, 4, 5]。<br>
+                    &emsp;&emsp;&emsp;&emsp;(6) Flush : 五張同一花色的牌<br>
+                    &emsp;&emsp;&emsp;&emsp;(7) Full House : Three of a Kind 加一個 Pair<br>
+                    &emsp;&emsp;&emsp;&emsp;(8) Four of a kind: : 四張牌數字一樣<br>
+                    &emsp;&emsp;&emsp;&emsp;(9) Straight flush : 數字連續的五張牌且花色一樣<br>
+                    <br>
                 </section>
             </section>
 
             <section>
-              <h3>輸入輸出說明</h3>
-              <section 
-              data-no="6"
-               data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                  style="text-align: left"><br>
-                  &emsp;&emsp;輸入說明<br>
-                  &emsp;&emsp;&emsp;&emsp;第1行，輸入整數N(2<=N<=5)<br>
-                  &emsp;&emsp;&emsp;&emsp;第2~1 +N行 輸入一字串，包含英文姓名和五張牌，中間以空格格開<br>
-                  &emsp;&emsp;範例輸入說明<br>
-                  &emsp;&emsp;&emsp;&emsp;2（N=2，玩家人數為整數2）<br>
-                  &emsp;&emsp;&emsp;&emsp;Allen 3H 4H 5H 6H 7H（玩家Allen 紅心3 紅心4 紅心5 紅心 6 紅心7）<br>
-                  &emsp;&emsp;&emsp;&emsp;Kate 9H 9D 9C 2S AS（玩家Kate 紅心9 方塊9 梅花9 黑桃2 黑桃A）<br><br>
-                  &emsp;&emsp;輸出說明<br>
-                  &emsp;&emsp;&emsp;&emsp;若所有牌不重複且輸入正確（參考 測試資料一）<br><br>
-                  &emsp;&emsp;&emsp;&emsp;則依牌型由大到小輸出玩家名稱和其牌型編號，中間以空格隔開。<br>
-                  &emsp;&emsp;&emsp;&emsp;若牌型相同，依據玩家輸入順序輸出。<br>
-                  &emsp;&emsp;&emsp;&emsp;第一行 牌型最大的玩家姓名+” ”+玩家牌型編號<br>
-                  &emsp;&emsp;&emsp;&emsp;第二行 牌型第二大的玩家姓名+” ”+玩家牌型編號<br>
-                  &emsp;&emsp;&emsp;&emsp;第N行 牌型最小的玩家姓名+” ”+玩家牌型編號<br>
-                  &emsp;&emsp;範例輸出說明<br>
-                  &emsp;&emsp;&emsp;&emsp;Allen 9 （玩家Allen 對應牌型為編號9的Straight flush）<br>
-                  &emsp;&emsp;&emsp;&emsp;Kate 4 （玩家Kate 對應牌型為編號4的Three of a kind）<br>
-              </section>
-          </section>
-
-          <section>
-            <h3>特殊要求</h3>
-            <section 
-            data-no="6"
-             data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
-                style="text-align: left"><br>
-                &emsp;&emsp;1.如果一副牌中有不合法的輸入，像是不存在的牌面、花色，則輸出 "Error input"(參考 測試資料二)<br><br>
-                &emsp;&emsp;2.如果一副牌中有重複的牌出現，即一副牌當中有兩張以上牌面跟花色一模一樣，則輸出"Duplicate deal"(參考 測試資料三）<br><br>
-                &emsp;&emsp;3.如果"Error input"和"Duplicate deal"同時發生，則輸出"Error input"(參考 測試資料四)<br><br>
+                <h3>輸入輸出說明</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br>
+                    &emsp;&emsp;輸入說明<br>
+                    &emsp;&emsp;&emsp;&emsp;第1行，輸入整數N(2<=N<=5)<br>
+                        &emsp;&emsp;&emsp;&emsp;第2~1 +N行 輸入一字串，包含英文姓名和五張牌，中間以空格格開<br>
+                        &emsp;&emsp;範例輸入說明<br>
+                        &emsp;&emsp;&emsp;&emsp;2（N=2，玩家人數為整數2）<br>
+                        &emsp;&emsp;&emsp;&emsp;Allen 3H 4H 5H 6H 7H（玩家Allen 紅心3 紅心4 紅心5 紅心 6 紅心7）<br>
+                        &emsp;&emsp;&emsp;&emsp;Kate 9H 9D 9C 2S AS（玩家Kate 紅心9 方塊9 梅花9 黑桃2 黑桃A）<br><br>
+                        &emsp;&emsp;輸出說明<br>
+                        &emsp;&emsp;&emsp;&emsp;若所有牌不重複且輸入正確（參考 測試資料一）<br><br>
+                        &emsp;&emsp;&emsp;&emsp;則依牌型由大到小輸出玩家名稱和其牌型編號，中間以空格隔開。<br>
+                        &emsp;&emsp;&emsp;&emsp;若牌型相同，依據玩家輸入順序輸出。<br>
+                        &emsp;&emsp;&emsp;&emsp;第一行 牌型最大的玩家姓名+” ”+玩家牌型編號<br>
+                        &emsp;&emsp;&emsp;&emsp;第二行 牌型第二大的玩家姓名+” ”+玩家牌型編號<br>
+                        &emsp;&emsp;&emsp;&emsp;第N行 牌型最小的玩家姓名+” ”+玩家牌型編號<br>
+                        &emsp;&emsp;範例輸出說明<br>
+                        &emsp;&emsp;&emsp;&emsp;Allen 9 （玩家Allen 對應牌型為編號9的Straight flush）<br>
+                        &emsp;&emsp;&emsp;&emsp;Kate 4 （玩家Kate 對應牌型為編號4的Three of a kind）<br>
+                </section>
             </section>
-        </section>
 
             <section>
-                <section
-                data-no="6"
-                 data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                <h3>特殊要求</h3>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br>
+                    &emsp;&emsp;1.如果一副牌中有不合法的輸入，像是不存在的牌面、花色，則輸出 "Error input"(參考 測試資料二)<br><br>
+                    &emsp;&emsp;2.如果一副牌中有重複的牌出現，即一副牌當中有兩張以上牌面跟花色一模一樣，則輸出"Duplicate deal"(參考 測試資料三）<br><br>
+                    &emsp;&emsp;3.如果"Error input"和"Duplicate deal"同時發生，則輸出"Error input"(參考 測試資料四)<br><br>
+                </section>
+            </section>
+
+            <section>
+                <section data-no="6" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
                     style="text-align: left">
                     <table style="background-color: #fff; width: 100%;">
                         <tr>
-                        <th>輸入輸出範例</th>
-                          <th>Input</th>
-                          <th>Output</th>
+                            <th>輸入輸出範例</th>
+                            <th>Input</th>
+                            <th>Output</th>
                         </tr>
                         <tr>
-                          <td>測試資料一</td>
-                          <td>
-                            4<br>Gery 6D 7C 7S 3H 10S<br>Mandy 4H 4D 4C 2D 4S<br>Tommy QH KD AC 5D 3S<br>Nina 10D 8C 8S 8H 10H
-                          </td>
-                          <td>
-                            Mandy 8<br>Nina 7<br>Gery 2<br>Tommy 1
-                          </td>
+                            <td>測試資料一</td>
+                            <td>
+                                4<br>Gery 6D 7C 7S 3H 10S<br>Mandy 4H 4D 4C 2D 4S<br>Tommy QH KD AC 5D 3S<br>Nina 10D 8C
+                                8S 8H 10H
+                            </td>
+                            <td>
+                                Mandy 8<br>Nina 7<br>Gery 2<br>Tommy 1
+                            </td>
                         </tr>
                         <tr>
                             <td>測試資料二</td>
                             <td>
                                 3<br>Ray 5H AS 9C QC 3DD<br>Kate JC KH 9D 6H 9S<br>Peter 4C 5D 2S 9D 2C
-                              </td>
-                              <td>
+                            </td>
+                            <td>
                                 Error input
-                              </td>
-                          </tr>
-                          <tr>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>測試資料三</td>
                             <td>
-                                4<br>Kevin AD 2C 3C 4D 4D<br>Tom 7S 8S 9S 9C 6S<br>Andy QH 8D KH 4H JH<br>Joe AS 2S 3C 4S 5S
-                              </td>
-                              <td>
+                                4<br>Kevin AD 2C 3C 4D 4D<br>Tom 7S 8S 9S 9C 6S<br>Andy QH 8D KH 4H JH<br>Joe AS 2S 3C
+                                4S 5S
+                            </td>
+                            <td>
                                 Duplicate deal
-                              </td>
-                          </tr>
-                          <tr>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>測試資料四</td>
                             <td>
                                 2<br>Tony 6H KC 5C 3D MZ<br>Maze 5H 5D 5C 6C 5S
-                              </td>
-                              <td>
+                            </td>
+                            <td>
                                 Error input
-                              </td>
-                          </tr>
-                      </table>
+                            </td>
+                        </tr>
+                    </table>
                 </section>
             </section>
-            
+
             <section>
                 <h3>Tips</h3>
-                    <section
-                        data-no="8"
-                        data-positionx="0.8" 
-                        data-positiony="0.03" 
-                        data-scale="1" 
-                        data-motionno="0"
-                        style="text-align: left"><br><br>
-                        &emsp;&emsp;把各種牌型判斷寫成function<br><br>
-                        <section data-auto-animate>
-                            <pre><code data-trim data-noescape>
+                <section data-no="8" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br><br>
+                    &emsp;&emsp;把各種牌型判斷寫成function<br><br>
+                    <section data-auto-animate>
+                        <pre><code data-trim data-noescape>
                                 #得到所有玩家牌型
                                 def getType(list1):
 
@@ -231,23 +222,18 @@
 
                                 #將撲克牌表示轉成數值
                                 def pureFace(list):
-                            </code></pre> 
-                        </section>
+                            </code></pre>
                     </section>
                 </section>
             </section>
+            </section>
 
-          <section>
-            <h3 >解答</h3>
-            <section
-                data-no="8"
-                data-positionx="0.8" 
-                data-positiony="0.03" 
-                data-scale="1" 
-                data-motionno="0"
-                style="text-align: left"><br><br>
-                <section data-auto-animate>
-                    <pre><code data-trim data-noescape data-line-numbers="|1-17|3-4|19-27|5-7|29-37|53-63|8-10|39-51|11-12|65-70|91-112|114-120|122-131|133-151|153-171|173-187|189-212|13-16|72-89|">
+            <section>
+                <h3>解答</h3>
+                <section data-no="8" data-positionx="0.8" data-positiony="0.03" data-scale="1" data-motionno="0"
+                    style="text-align: left"><br><br>
+                    <section data-auto-animate>
+                        <pre><code data-trim data-noescape data-line-numbers="|1-17|3-4|19-27|5-7|29-37|53-63|8-10|39-51|11-12|65-70|91-112|114-120|122-131|133-151|153-171|173-187|189-212|13-16|72-89|">
                     # 主程式
                     def func():
                         #輸入每個人的手牌
@@ -464,10 +450,10 @@
 
                     if __name__=='__main__':
                         func()
-                    </code></pre> 
+                    </code></pre>
+                    </section>
                 </section>
             </section>
-           </section>
         </div>
     </div>
     <div id="pageIndex"></div>
